@@ -45,62 +45,61 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-      title: Text('Calculator🧮'),
-      centerTitle: true,
-      backgroundColor: Colors.red,
-    ));
-    body:
-    Padding(
-      padding: const EdgeInsets.all(20),
-      child: Column(
-        children: [
-          TextField(
-            controller: num1,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'First Number:',
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          TextField(
-            controller: num2,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Second Number:',
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          title: Text('Calculator🧮'),
+          centerTitle: true,
+          backgroundColor: Colors.red,
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
             children: [
-              TextButton(
-                  onPressed: () {
-                    calculate(num1.text, num2.text, '+');
-                  },
-                  child: Text('➕')),
-              TextButton(
-                  onPressed: () {
-                    calculate(num1.text, num2.text, '-');
-                  },
-                  child: Text('➖')),
-              TextButton(
-                  onPressed: () {
-                    calculate(num1.text, num2.text, '*');
-                  },
-                  child: Text('✖')),
-              TextButton(
-                  onPressed: () {
-                    calculate(num1.text, num2.text, '/');
-                  },
-                  child: Text('➗')),
+              TextField(
+                controller: num1,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'First Number:',
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              TextField(
+                controller: num2,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Second Number:',
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        calculate(num1.text, num2.text, '+');
+                      },
+                      child: Text('➕')),
+                  TextButton(
+                      onPressed: () {
+                        calculate(num1.text, num2.text, '-');
+                      },
+                      child: Text('➖')),
+                  TextButton(
+                      onPressed: () {
+                        calculate(num1.text, num2.text, '*');
+                      },
+                      child: Text('✖')),
+                  TextButton(
+                      onPressed: () {
+                        calculate(num1.text, num2.text, '/');
+                      },
+                      child: Text('➗')),
+                ],
+              )
             ],
-          )
-        ],
-      ),
-    );
+          ),
+        ));
   }
 }
